@@ -11,12 +11,18 @@
 #define NUM_SOLO 6; //type 2
 
 sem_t mutex;
-sem_t pref_active;
+sem_t slots; //empty: 2 for soloists, otherwise 4 (should start at 4)
+sem_t jug_lock;
+sem_t dance_lock;
+sem_t solo_lock;
+int type = -1;
 pthread_t *stage_space[4];
-int first_spot = 0;
-int first_duet_spot = 0;
 
 void performer_init() {
+    sem_init(&slots, 0, 4);
+    sem_init(&jug_lock, 0, 0);
+    sem_init(&dance_lock, 0, 0);
+    sem_init(&solo_lock, 0, 0);
     for (int i=0; i < NUM_JUGGLERS; i++) {
         pthread_t preformer;
         Pthread_create(&preformer, NULL, join_stage, 0);
@@ -40,16 +46,27 @@ void join_stage(void *input) {
 
     // cast and dereference input argument
     int class = *(int *) input;
-    printf("I am a %s", (class == 0) ? "Juggler" : (class == 1) ? "Dancer" : "Soloist");
-    
+    //sem_wait(&slots);
     sem_wait(&mutex);//Start crit section
+    if (type == -1) {
+        type = class;
+        if (type == 0) sem_post(&jug_lock);
+        else if (type = 1) sem_post(&dance_lock);
+    }
         switch (class)
         {
         case 0:
+            // sem_wait(&jug_lock);
+            sem_wait(&slots);
+            sleep(rand()%5);
+            sem_post(&jug_lock);
+            
             break;
         case 1:
+            // sem_wait(&dance_lock);
             break;
         case 2:
+            // sem_wait(&solo_lock);
             break;
         
         default:
@@ -60,11 +77,11 @@ void join_stage(void *input) {
         
     }
     
-    printf("I am %s number %d");
+    printf("I am %s number %d", ((class == 0) ? "juggler" : (class == 1) ? "dancer" : "soloist"), 1);
 }
 
 
-void main () {
+int main () {
     // Getting random seed
     char buffer[5];
     int childnum;

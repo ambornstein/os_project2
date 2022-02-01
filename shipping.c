@@ -5,7 +5,7 @@
 #include <sys/wait.h>
 #include <pthread.h>
 
-
+//Craig said can be solved with 1 mutex and 4 condition variables. (or 5 semaphores)
 
 int main () {
     // Getting random seed

@@ -1,2 +1,2 @@
 spectacular: spectacular.c
-	gcc spectacular.c -o spectacular
+	gcc -pthread spectacular.c -o spectacular

@@ -32,7 +32,24 @@ int active_red = -1;
 int active_blue = -1;
 int active_yellow = -1;
 int active_green = -1;
+// array for keeping track of claim over stations
+int stations[4] = {-1, -1, -1, -1};
 package_t* PPP;
+
+void gen_instruction(int* array) {
+    //shuffle
+    for (int i = 0; i < 4; i++) {
+        int place = rand()%4;
+        while (array[place] != 0) {
+            place = rand()%4;
+        }
+        array[place] = i;
+    }
+    //choose length
+    for (int i = rand()%4 + 1; i < 4; i++) {
+        array[i] = -1;
+    }
+}
 
 void * start_work(void* input) {
     // get worker info
@@ -77,7 +94,6 @@ void * start_work(void* input) {
     if (*active == -1) {
        *active = info->number;
         pthread_mutex_unlock(&mutex);
-        printf("I'm first! (%s #%d)\n", team_name, info->number);
     }
     else {
         pthread_cond_wait(team_queue, &mutex);
@@ -85,21 +101,75 @@ void * start_work(void* input) {
         // woken as new active thread
         *active = info->number;
         pthread_mutex_unlock(&mutex);
-        printf("I'm awake! (%s #%d)\n", team_name, info->number);
     }
     // critical region ends
 
     // sleep to make sure all threads have loaded
     sleep(1);
+    
+    // grab a package from the PPP
+    pthread_mutex_lock(&mutex);
+    package_t package = *PPP;
+    PPP++;
+    printf("%s %d grabbed a package:\n\tPackage: %d\n\tSteps:", team_name, info->number, package.id);
+    for (int i = 0; i < 4; i++) {
+        if (package.instructions[i] != -1)
+            printf(" %d", package.instructions[i]);
+    }
+    printf("\n\n");
+    pthread_mutex_unlock(&mutex);
+
+
+
+    // claiming stations
+    int claimed = 0;
+    while(claimed == 0) {
+        claimed = 1;
+        pthread_mutex_lock(&mutex);
+        for (int i = 0; i < 4; i++) {
+            if (package.instructions[i] != -1){
+                if (stations[package.instructions[i]] != -1) {
+                    claimed = 0;
+                }
+            }
+        }
+        if (claimed == 1) {
+            for (int i = 0; i < 4; i++) {
+                if (package.instructions[i] != -1) {
+                    stations[package.instructions[i]] = info->team;
+                }
+            }
+            printf("%s %d claimed ", team_name, info->number);
+            for (int i = 0; i < 4; i++) {
+                if (stations[i] == info->team)
+                    printf(" %d", i);
+            }
+            printf("\n\n");
+        }
+        pthread_mutex_unlock(&mutex);
+    }
+
+    // processing package
+    pthread_mutex_lock(&mutex);
+    for (int i = 0; i < 4; i++) {
+        if (package.instructions[i] != -1){
+            // package arrives station
+            pthread_mutex_unlock(&mutex);
+            sleep(1); // work at station here
+            pthread_mutex_lock(&mutex);
+            // package leaves station
+            stations[package.instructions[i]] = -1;
+            printf("%s %d released %d\n\n", team_name, info->number, package.instructions[i]);
+        }
+    }
+    pthread_mutex_unlock(&mutex);
+
+    printf("%s %d loaded a package onto the truck\n\n", team_name, info->number);
 
     // wake next thread in line
     pthread_mutex_lock(&mutex);
     pthread_cond_signal(team_queue);
     pthread_mutex_unlock(&mutex);
-
-    printf("(%s #%d) through the critical section\n", team_name, info->number);
-
-    return NULL;
 }
 
 void team_init() {
@@ -120,7 +190,7 @@ void team_init() {
     for (int i = 0; i < TEAMSPERGROUP * MEMBERSPERTEAM; i++) {
         pthread_join(tid[i], NULL);
     }
-    printf("red: %d, blue: %d, yellow: %d, green: %d\n", active_red, active_blue, active_yellow, active_green);
+    //printf("red: %d, blue: %d, yellow: %d, green: %d\n", active_red, active_blue, active_yellow, active_green);
 }
 
 void ppp_init() {
@@ -132,10 +202,9 @@ void ppp_init() {
     for (int package = 0; package < num_packages; package++) {
         package_t* p = PPP + package;
         p->id = package;
-        p->instructions;
+        gen_instruction(p->instructions);
     }
 }
-//Craig said can be solved with 1 mutex and 4 condition variables. (or 5 semaphores)
 
 int main () {
     // Getting random seed
@@ -154,5 +223,6 @@ int main () {
     pthread_cond_init(&next_yellow, NULL);
     pthread_cond_init(&next_green, NULL);
 
+    ppp_init();
     team_init();
 }

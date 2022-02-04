@@ -1,0 +1,1041 @@
+./shipping
+Read seed value: 5
+Blue 4 grabbed a package:
+        Package: 0
+        Steps: 3
+
+Blue 4 claimed  3
+
+Yellow 1 grabbed a package:
+        Package: 1
+        Steps: 1
+
+Yellow 1 claimed  1
+
+Red 5 grabbed a package:
+        Package: 2
+        Steps: 2 3 1 0
+
+Green 0 grabbed a package:
+        Package: 3
+        Steps: 2
+
+Green 0 claimed  2
+
+Blue 4 released 3
+
+Blue 4 loaded a package onto the truck
+
+Yellow 1 released 1
+
+Yellow 1 loaded a package onto the truck
+
+Green 0 released 2
+
+Green 0 loaded a package onto the truck
+
+Red 5 claimed  0 1 2 3
+
+Blue 3 grabbed a package:
+        Package: 4
+        Steps: 3
+
+Green 2 grabbed a package:
+        Package: 5
+        Steps: 2 1 0
+
+Red 5 released 2
+
+Yellow 6 grabbed a package:
+        Package: 6
+        Steps: 0 1
+
+Red 5 released 3
+
+Blue 3 claimed  3
+
+Red 5 released 1
+
+Blue 3 released 3
+
+Blue 3 loaded a package onto the truck
+
+Red 5 released 0
+
+Red 5 loaded a package onto the truck
+
+Green 2 claimed  0 1 2
+
+Blue 8 grabbed a package:
+        Package: 7
+        Steps: 0 1
+
+Red 8 grabbed a package:
+        Package: 8
+        Steps: 3
+
+Red 8 claimed  3
+
+Green 2 released 2
+
+Red 8 released 3
+
+Red 8 loaded a package onto the truck
+
+Green 2 released 1
+
+Green 2 released 0
+
+Green 2 loaded a package onto the truck
+
+Red 0 grabbed a package:
+        Package: 9
+        Steps: 3 0 2 1
+
+Red 0 claimed  0 1 2 3
+
+Red 0 released 3
+
+Green 5 grabbed a package:
+        Package: 10
+        Steps: 0 1 2 3
+
+Red 0 released 0
+
+Red 0 released 2
+
+Red 0 released 1
+
+Red 0 loaded a package onto the truck
+
+Blue 8 claimed  0 1
+
+Red 6 grabbed a package:
+        Package: 11
+        Steps: 2 0
+
+Blue 8 released 0
+
+Red 6 claimed  0 2
+
+Blue 8 released 1
+
+Blue 8 loaded a package onto the truck
+
+Red 6 released 2
+
+Blue 0 grabbed a package:
+        Package: 12
+        Steps: 2 0 1
+
+Red 6 released 0
+
+Red 6 loaded a package onto the truck
+
+Blue 0 claimed  0 1 2
+
+Red 7 grabbed a package:
+        Package: 13
+        Steps: 1 0
+
+Blue 0 released 2
+
+Blue 0 released 0
+
+Blue 0 released 1
+
+Blue 0 loaded a package onto the truck
+
+Red 7 claimed  0 1
+
+Blue 6 grabbed a package:
+        Package: 14
+        Steps: 0 3 1
+
+Red 7 released 1
+
+Red 7 released 0
+
+Red 7 loaded a package onto the truck
+
+Green 5 claimed  0 1 2 3
+
+Red 2 grabbed a package:
+        Package: 15
+        Steps: 1 3 2 0
+
+Green 5 released 0
+
+Green 5 released 1
+
+Yellow 6 claimed  0 1
+
+Green 5 released 2
+
+Yellow 6 released 0
+
+Green 5 released 3
+
+Green 5 loaded a package onto the truck
+
+Yellow 6 released 1
+
+Yellow 6 loaded a package onto the truck
+
+Red 2 claimed  0 1 2 3
+
+Green 8 grabbed a package:
+        Package: 16
+        Steps: 1 2
+
+Yellow 8 grabbed a package:
+        Package: 17
+        Steps: 0 3 1
+
+Red 2 released 1
+
+Red 2 released 3
+
+Red 2 released 2
+
+Green 8 claimed  1 2
+
+Red 2 released 0
+
+Red 2 loaded a package onto the truck
+
+Green 8 released 1
+
+Blue 6 claimed  0 1 3
+
+Green 8 released 2
+
+Green 8 loaded a package onto the truck
+
+Red 9 grabbed a package:
+        Package: 18
+        Steps: 2 3 1 0
+
+Blue 6 released 0
+
+Blue 6 released 3
+
+Green 1 grabbed a package:
+        Package: 19
+        Steps: 0 2 3 1
+
+Blue 6 released 1
+
+Blue 6 loaded a package onto the truck
+
+Yellow 8 claimed  0 1 3
+
+Blue 7 grabbed a package:
+        Package: 20
+        Steps: 3 1 0 2
+
+Yellow 8 released 0
+
+Yellow 8 released 3
+
+Yellow 8 released 1
+
+Yellow 8 loaded a package onto the truck
+
+Green 1 claimed  0 1 2 3
+
+Yellow 2 grabbed a package:
+        Package: 21
+        Steps: 0 2 1 3
+
+Green 1 released 0
+
+Green 1 released 2
+
+Green 1 released 3
+
+Green 1 released 1
+
+Green 1 loaded a package onto the truck
+
+Red 9 claimed  0 1 2 3
+
+Green 3 grabbed a package:
+        Package: 22
+        Steps: 0 1 2
+
+Red 9 released 2
+
+Red 9 released 3
+
+Red 9 released 1
+
+Red 9 released 0
+
+Red 9 loaded a package onto the truck
+
+Blue 7 claimed  0 1 2 3
+
+Red 4 grabbed a package:
+        Package: 23
+        Steps: 1
+
+Blue 7 released 3
+
+Blue 7 released 1
+
+Red 4 claimed  1
+
+Blue 7 released 0
+
+Red 4 released 1
+
+Red 4 loaded a package onto the truck
+
+Blue 7 released 2
+
+Blue 7 loaded a package onto the truck
+
+Green 3 claimed  0 1 2
+
+Red 3 grabbed a package:
+        Package: 24
+        Steps: 3 1 2 0
+
+Blue 9 grabbed a package:
+        Package: 25
+        Steps: 0
+
+Green 3 released 0
+
+Blue 9 claimed  0
+
+Green 3 released 1
+
+Blue 9 released 0
+
+Blue 9 loaded a package onto the truck
+
+Green 3 released 2
+
+Green 3 loaded a package onto the truck
+
+Yellow 2 claimed  0 1 2 3
+
+Blue 5 grabbed a package:
+        Package: 26
+        Steps: 3 1
+
+Green 7 grabbed a package:
+        Package: 27
+        Steps: 3
+
+Yellow 2 released 0
+
+Yellow 2 released 2
+
+Yellow 2 released 1
+
+Yellow 2 released 3
+
+Yellow 2 loaded a package onto the truck
+
+Red 3 claimed  0 1 2 3
+
+Yellow 0 grabbed a package:
+        Package: 28
+        Steps: 2 0 1 3
+
+Red 3 released 3
+
+Green 7 claimed  3
+
+Red 3 released 1
+
+Green 7 released 3
+
+Green 7 loaded a package onto the truck
+
+Blue 5 claimed  1 3
+
+Red 3 released 2
+
+Green 4 grabbed a package:
+        Package: 29
+        Steps: 0
+
+Blue 5 released 3
+
+Red 3 released 0
+
+Red 3 loaded a package onto the truck
+
+Green 4 claimed  0
+
+Blue 5 released 1
+
+Blue 5 loaded a package onto the truck
+
+Red 1 grabbed a package:
+        Package: 30
+        Steps: 3
+
+Red 1 claimed  3
+
+Green 4 released 0
+
+Green 4 loaded a package onto the truck
+
+Blue 1 grabbed a package:
+        Package: 31
+        Steps: 0 3
+
+Red 1 released 3
+
+Red 1 loaded a package onto the truck
+
+Green 6 grabbed a package:
+        Package: 32
+        Steps: 0 2 1
+
+Green 6 claimed  0 1 2
+
+Green 6 released 0
+
+Blue 1 claimed  0 3
+
+Green 6 released 2
+
+Blue 1 released 0
+
+Green 6 released 1
+
+Green 6 loaded a package onto the truck
+
+Blue 1 released 3
+
+Blue 1 loaded a package onto the truck
+
+Yellow 0 claimed  0 1 2 3
+
+Green 9 grabbed a package:
+        Package: 33
+        Steps: 1
+
+Blue 2 grabbed a package:
+        Package: 34
+        Steps: 0
+
+Yellow 0 released 2
+
+Yellow 0 released 0
+
+Blue 2 claimed  0
+
+Yellow 0 released 1
+
+Blue 2 released 0
+
+Blue 2 loaded a package onto the truck
+
+Green 9 claimed  1
+
+Yellow 0 released 3
+
+Yellow 0 loaded a package onto the truck
+
+Green 9 released 1
+
+Green 9 loaded a package onto the truck
+
+Yellow 3 grabbed a package:
+        Package: 35
+        Steps: 2 0 3
+
+Yellow 3 claimed  0 2 3
+
+Yellow 3 released 2
+
+Yellow 3 released 0
+
+Yellow 3 released 3
+
+Yellow 3 loaded a package onto the truck
+
+Yellow 4 grabbed a package:
+        Package: 36
+        Steps: 3 1 2
+
+Yellow 4 claimed  1 2 3
+
+Yellow 4 released 3
+
+Yellow 4 released 1
+
+Yellow 4 released 2
+
+Yellow 4 loaded a package onto the truck
+
+Yellow 5 grabbed a package:
+        Package: 37
+        Steps: 2 0 1 3
+
+Yellow 5 claimed  0 1 2 3
+
+Yellow 5 released 2
+
+Yellow 5 released 0
+
+Yellow 5 released 1
+
+Yellow 5 released 3
+
+Yellow 5 loaded a package onto the truck
+
+Yellow 7 grabbed a package:
+        Package: 38
+        Steps: 1 3 0 2
+
+Yellow 7 claimed  0 1 2 3
+
+Yellow 7 released 1
+
+Yellow 7 released 3
+
+Yellow 7 released 0
+
+Yellow 7 released 2
+
+Yellow 7 loaded a package onto the truck
+
+Yellow 9 grabbed a package:
+        Package: 39
+        Steps: 3 1
+
+Yellow 9 claimed  1 3
+
+Yellow 9 released 3
+
+Yellow 9 released 1
+
+Yellow 9 loaded a package onto the truck
+
+-----------------------------------------
+
+./shipping
+Read seed value: 12345
+Blue 0 grabbed a package:
+        Package: 0
+        Steps: 3 1
+
+Blue 0 claimed  1 3
+
+Yellow 1 grabbed a package:
+        Package: 1
+        Steps: 1 3
+
+Red 9 grabbed a package:
+        Package: 2
+        Steps: 3 2
+
+Green 5 grabbed a package:
+        Package: 3
+        Steps: 3 1 0
+
+Blue 0 released 3
+
+Red 9 claimed  2 3
+
+Blue 0 released 1
+
+Blue 0 loaded a package onto the truck
+
+Red 9 released 3
+
+Green 5 claimed  0 1 3
+
+Blue 8 grabbed a package:
+        Package: 4
+        Steps: 0 3 2 1
+
+Red 9 released 2
+
+Red 9 loaded a package onto the truck
+
+Green 5 released 3
+
+Green 5 released 1
+
+Red 3 grabbed a package:
+        Package: 5
+        Steps: 1 2 0 3
+
+Yellow 1 claimed  1 3
+
+Green 5 released 0
+
+Green 5 loaded a package onto the truck
+
+Yellow 1 released 1
+
+Green 9 grabbed a package:
+        Package: 6
+        Steps: 2 3 0 1
+
+Yellow 1 released 3
+
+Yellow 1 loaded a package onto the truck
+
+Blue 8 claimed  0 1 2 3
+
+Yellow 2 grabbed a package:
+        Package: 7
+        Steps: 1 2 3
+
+Blue 8 released 0
+
+Blue 8 released 3
+
+Blue 8 released 2
+
+Blue 8 released 1
+
+Blue 8 loaded a package onto the truck
+
+Green 9 claimed  0 1 2 3
+
+Blue 4 grabbed a package:
+        Package: 8
+        Steps: 0 3
+
+Green 9 released 2
+
+Green 9 released 3
+
+Green 9 released 0
+
+Blue 4 claimed  0 3
+
+Green 9 released 1
+
+Green 9 loaded a package onto the truck
+
+Blue 4 released 0
+
+Green 0 grabbed a package:
+        Package: 9
+        Steps: 1
+
+Green 0 claimed  1
+
+Blue 4 released 3
+
+Blue 4 loaded a package onto the truck
+
+Green 0 released 1
+
+Green 0 loaded a package onto the truck
+
+Red 3 claimed  0 1 2 3
+
+Blue 6 grabbed a package:
+        Package: 10
+        Steps: 1 0 3 2
+
+Green 3 grabbed a package:
+        Package: 11
+        Steps: 2
+
+Red 3 released 1
+
+Red 3 released 2
+
+Green 3 claimed  2
+
+Red 3 released 0
+
+Green 3 released 2
+
+Green 3 loaded a package onto the truck
+
+Red 3 released 3
+
+Red 3 loaded a package onto the truck
+
+Blue 6 claimed  0 1 2 3
+
+Green 8 grabbed a package:
+        Package: 12
+        Steps: 1
+
+Red 6 grabbed a package:
+        Package: 13
+        Steps: 1 3 0
+
+Blue 6 released 1
+
+Green 8 claimed  1
+
+Blue 6 released 0
+
+Green 8 released 1
+
+Green 8 loaded a package onto the truck
+
+Blue 6 released 3
+
+Red 6 claimed  0 1 3
+
+Green 6 grabbed a package:
+        Package: 14
+        Steps: 3 1 2
+
+Blue 6 released 2
+
+Blue 6 loaded a package onto the truck
+
+Red 6 released 1
+
+Red 6 released 3
+
+Blue 5 grabbed a package:
+        Package: 15
+        Steps: 3 1
+
+Blue 5 claimed  1 3
+
+Red 6 released 0
+
+Red 6 loaded a package onto the truck
+
+Blue 5 released 3
+
+Blue 5 released 1
+
+Blue 5 loaded a package onto the truck
+
+Red 1 grabbed a package:
+        Package: 16
+        Steps: 3 1
+
+Red 1 claimed  1 3
+
+Red 1 released 3
+
+Blue 7 grabbed a package:
+        Package: 17
+        Steps: 2 1 0
+
+Red 1 released 1
+
+Red 1 loaded a package onto the truck
+
+Green 6 claimed  1 2 3
+
+Red 8 grabbed a package:
+        Package: 18
+        Steps: 2 1 3
+
+Green 6 released 3
+
+Green 6 released 1
+
+Green 6 released 2
+
+Green 6 loaded a package onto the truck
+
+Yellow 2 claimed  1 2 3
+
+Green 2 grabbed a package:
+        Package: 19
+        Steps: 3 2
+
+Yellow 2 released 1
+
+Yellow 2 released 2
+
+Blue 7 claimed  0 1 2
+
+Yellow 2 released 3
+
+Yellow 2 loaded a package onto the truck
+
+Blue 7 released 2
+
+Green 2 claimed  2 3
+
+Yellow 3 grabbed a package:
+        Package: 20
+        Steps: 2 3 0 1
+
+Blue 7 released 1
+
+Green 2 released 3
+
+Blue 7 released 0
+
+Blue 7 loaded a package onto the truck
+
+Green 2 released 2
+
+Green 2 loaded a package onto the truck
+
+Red 8 claimed  1 2 3
+
+Green 7 grabbed a package:
+        Package: 21
+        Steps: 1 0
+
+Red 8 released 2
+
+Blue 9 grabbed a package:
+        Package: 22
+        Steps: 0 3 2 1
+
+Red 8 released 1
+
+Green 7 claimed  0 1
+
+Red 8 released 3
+
+Red 8 loaded a package onto the truck
+
+Green 7 released 1
+
+Red 4 grabbed a package:
+        Package: 23
+        Steps: 1 3 2
+
+Red 4 claimed  1 2 3
+
+Green 7 released 0
+
+Green 7 loaded a package onto the truck
+
+Red 4 released 1
+
+Green 1 grabbed a package:
+        Package: 24
+        Steps: 1 0 2
+
+Red 4 released 3
+
+Red 4 released 2
+
+Red 4 loaded a package onto the truck
+
+Blue 9 claimed  0 1 2 3
+
+Red 0 grabbed a package:
+        Package: 25
+        Steps: 1
+
+Blue 9 released 0
+
+Blue 9 released 3
+
+Blue 9 released 2
+
+Blue 9 released 1
+
+Blue 9 loaded a package onto the truck
+
+Red 0 claimed  1
+
+Blue 2 grabbed a package:
+        Package: 26
+        Steps: 0 3
+
+Blue 2 claimed  0 3
+
+Red 0 released 1
+
+Red 0 loaded a package onto the truck
+
+Blue 2 released 0
+
+Red 7 grabbed a package:
+        Package: 27
+        Steps: 1
+
+Red 7 claimed  1
+
+Blue 2 released 3
+
+Blue 2 loaded a package onto the truck
+
+Red 7 released 1
+
+Red 7 loaded a package onto the truck
+
+Yellow 3 claimed  0 1 2 3
+
+Red 5 grabbed a package:
+        Package: 28
+        Steps: 3 0
+
+Yellow 3 released 2
+
+Blue 1 grabbed a package:
+        Package: 29
+        Steps: 1
+
+Yellow 3 released 3
+
+Yellow 3 released 0
+
+Red 5 claimed  0 3
+
+Yellow 3 released 1
+
+Yellow 3 loaded a package onto the truck
+
+Blue 1 claimed  1
+
+Red 5 released 3
+
+Yellow 5 grabbed a package:
+        Package: 30
+        Steps: 2 1
+
+Blue 1 released 1
+
+Blue 1 loaded a package onto the truck
+
+Red 5 released 0
+
+Red 5 loaded a package onto the truck
+
+Green 1 claimed  0 1 2
+
+Blue 3 grabbed a package:
+        Package: 31
+        Steps: 0 2
+
+Green 1 released 1
+
+Red 2 grabbed a package:
+        Package: 32
+        Steps: 0 3 1 2
+
+Green 1 released 0
+
+Green 1 released 2
+
+Green 1 loaded a package onto the truck
+
+Red 2 claimed  0 1 2 3
+
+Green 4 grabbed a package:
+        Package: 33
+        Steps: 0 1 3
+
+Red 2 released 0
+
+Red 2 released 3
+
+Red 2 released 1
+
+Green 4 claimed  0 1 3
+
+Red 2 released 2
+
+Red 2 loaded a package onto the truck
+
+Green 4 released 0
+
+Blue 3 claimed  0 2
+
+Green 4 released 1
+
+Blue 3 released 0
+
+Green 4 released 3
+
+Green 4 loaded a package onto the truck
+
+Blue 3 released 2
+
+Blue 3 loaded a package onto the truck
+
+Yellow 5 claimed  1 2
+
+Yellow 5 released 2
+
+Yellow 5 released 1
+
+Yellow 5 loaded a package onto the truck
+
+Yellow 8 grabbed a package:
+        Package: 34
+        Steps: 3 0 1
+
+Yellow 8 claimed  0 1 3
+
+Yellow 8 released 3
+
+Yellow 8 released 0
+
+Yellow 8 released 1
+
+Yellow 8 loaded a package onto the truck
+
+Yellow 9 grabbed a package:
+        Package: 35
+        Steps: 1
+
+Yellow 9 claimed  1
+
+Yellow 9 released 1
+
+Yellow 9 loaded a package onto the truck
+
+Yellow 4 grabbed a package:
+        Package: 36
+        Steps: 1 2
+
+Yellow 4 claimed  1 2
+
+Yellow 4 released 1
+
+Yellow 4 released 2
+
+Yellow 4 loaded a package onto the truck
+
+Yellow 6 grabbed a package:
+        Package: 37
+        Steps: 2 1
+
+Yellow 6 claimed  1 2
+
+Yellow 6 released 2
+
+Yellow 6 released 1
+
+Yellow 6 loaded a package onto the truck
+
+Yellow 0 grabbed a package:
+        Package: 38
+        Steps: 1 3 0
+
+Yellow 0 claimed  0 1 3
+
+Yellow 0 released 1
+
+Yellow 0 released 3
+
+Yellow 0 released 0
+
+Yellow 0 loaded a package onto the truck
+
+Yellow 7 grabbed a package:
+        Package: 39
+        Steps: 2 1
+
+Yellow 7 claimed  1 2
+
+Yellow 7 released 2
+
+Yellow 7 released 1
+
+Yellow 7 loaded a package onto the truck

@@ -17,8 +17,12 @@ sem_t dance_lock;
 sem_t solo_lock;
 
 // globals
-int active_type = -1;
+//int active_type = -1;
 int slots; //empty: 2 for soloists, otherwise 4 (should start at 4)
+int jugglers_done;
+int dancers_done;
+int soloists_done;
+int active_type = -1;
 pthread_t stage_space[4];
 
 typedef struct {
@@ -27,41 +31,84 @@ typedef struct {
     int ready_time;
 } performer_t;
 
+int first_index(pthread_t* array) {
+    for (int i = 0; i < (int)sizeof(array); i++) {
+        if (array[i] == (pthread_t) NULL) return i;
+    }
+    return -1;
+}
+
+
 void * join_stage(void *input) {
     // cast and dereference input argument
     performer_t *info = (performer_t *) input;
 
     // getting ready
     sleep(info->ready_time);
-
-    printf("I am %s #%d\n", ((info->type == 0) ? "Juggler" : (info->type == 1) ? "Dancer" : "Soloist"), info->number);
-    sem_wait(&mutex);//Start crit section
-    if (active_type == -1) {
-        active_type = info->type;
-        switch(info->type) {
-            case 0: sem_post(&jug_lock); break;
-            case 1: sem_post(&dance_lock); break;
-            case 2: sem_post(&solo_lock); break;
-        }
+    char* type;
+    sem_t* queue;
+    int* count;
+    int end;
+    switch(info->type) {
+        case 0:
+            type = "Juggler";
+            queue = &jug_lock;
+            count = &jugglers_done;
+            end = NUM_JUGGLERS;
+            slots = 3;
+            break;
+        case 1:
+            type = "Dancer";
+            queue = &dance_lock;
+            count = &dancers_done;
+            end = NUM_DANCERS;
+            slots = 3;
+            break;
+        case 2:
+            type = "Soloist";
+            queue = &solo_lock;
+            count = &soloists_done;
+            end = NUM_SOLO;
+            slots = 1;
+            break;
     }
-    int r = 0;
-    if (slots != 0) {
-        while (r < slots) {
-            if (stage_space[r] == NULL) {
-                stage_space[r] = pthread_self();
-                break;
-            }
-            else r++;
+    
+    sem_wait(&mutex);//Start crit section
+    if (active_type == -1) {//First thread to execute
+        active_type = info->type;
+        for (int i = 0; i < slots; i++) {
+            sem_post(queue);
         }
+        slots = 0;
+        sem_post(&mutex);
     }
     else {
-        printf("On stage: ");
-        for (int n = 0; n < 4; n++) {
-            printf("%ld",stage_space[n]);
-        }
-        printf("\n");
+        sem_post(&mutex);
+        sem_wait(queue);
+    }//End crit section (overall)
+    
+    sem_wait(&mutex);//Start crit section
+    int r = first_index(stage_space);
+    if (r > -1) {
+        stage_space[r] = pthread_self();
+        sem_post(&mutex);
     }
-    sem_post(&mutex);//End crit section
+    else {
+        sem_post(&mutex);
+        sem_wait(queue);
+    }//End crit section
+
+    printf("%s #%d: Starting my performance at position %d \n", type, info->number, r+1);
+    sleep(info->ready_time);
+    printf("%s #%d: Exiting the stage at position %d\n", type, info->number, r+1);
+    sem_wait(&mutex);//Start crit section
+    stage_space[r] = (pthread_t) NULL;
+    (*count)++;
+    if (*count >= end) {
+        printf("last one!\n");
+    }
+    else sem_post(queue);
+    sem_post(&mutex);
 }
 
 /*void leave_stage(int input) {
